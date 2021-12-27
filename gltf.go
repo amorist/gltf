@@ -265,6 +265,12 @@ type Primitive struct {
 	Targets    []Attribute   `json:"targets,omitempty" validate:"omitempty,dive,dive,keys,oneof=POSITION NORMAL TANGENT,endkeys"` // Only POSITION, NORMAL, and TANGENT supported.
 }
 
+// AmorPlusTexture .
+type AmorPlusTexture struct {
+	AlphaTexture     *AlphaTexture `json:"alphaTexture,omitempty"`
+	BaseColorTexture *TextureInfo  `json:"baseColorTexture,omitempty"`
+}
+
 // The Material appearance of a primitive.
 type Material struct {
 	Extensions           Extensions            `json:"extensions,omitempty"`
@@ -272,7 +278,7 @@ type Material struct {
 	Name                 string                `json:"name,omitempty"`
 	PBRMetallicRoughness *PBRMetallicRoughness `json:"pbrMetallicRoughness,omitempty"`
 	NormalTexture        *NormalTexture        `json:"normalTexture,omitempty"`
-	AlphaTexture         *AlphaTexture         `json:"alphaTexture,omitempty"`
+	AmorPlusTexture      *AmorPlusTexture      `json:"amorPlusTexture,omitempty"`
 	OcclusionTexture     *OcclusionTexture     `json:"occlusionTexture,omitempty"`
 	EmissiveTexture      *TextureInfo          `json:"emissiveTexture,omitempty"`
 	EmissiveFactor       [3]float32            `json:"emissiveFactor,omitempty" validate:"dive,gte=0,lte=1"`
