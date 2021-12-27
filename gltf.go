@@ -272,6 +272,7 @@ type Material struct {
 	Name                 string                `json:"name,omitempty"`
 	PBRMetallicRoughness *PBRMetallicRoughness `json:"pbrMetallicRoughness,omitempty"`
 	NormalTexture        *NormalTexture        `json:"normalTexture,omitempty"`
+	AlphaTexture         *AlphaTexture         `json:"alphaTexture,omitempty"`
 	OcclusionTexture     *OcclusionTexture     `json:"occlusionTexture,omitempty"`
 	EmissiveTexture      *TextureInfo          `json:"emissiveTexture,omitempty"`
 	EmissiveFactor       [3]float32            `json:"emissiveFactor,omitempty" validate:"dive,gte=0,lte=1"`
@@ -290,6 +291,15 @@ func (m *Material) AlphaCutoffOrDefault() float32 {
 
 // A NormalTexture references to a normal texture.
 type NormalTexture struct {
+	Extensions Extensions  `json:"extensions,omitempty"`
+	Extras     interface{} `json:"extras,omitempty"`
+	Index      *uint32     `json:"index,omitempty"`
+	TexCoord   uint32      `json:"texCoord,omitempty"` // The index of texture's TEXCOORD attribute used for texture coordinate mapping.
+	Scale      *float32    `json:"scale,omitempty"`
+}
+
+// A AlphaTexture references to a alpha texture.
+type AlphaTexture struct {
 	Extensions Extensions  `json:"extensions,omitempty"`
 	Extras     interface{} `json:"extras,omitempty"`
 	Index      *uint32     `json:"index,omitempty"`
