@@ -12,8 +12,8 @@ import (
 	"math"
 	"reflect"
 
-	"github.com/qmuntal/gltf"
-	"github.com/qmuntal/gltf/binary"
+	"github.com/amorist/gltf"
+	"github.com/amorist/gltf/binary"
 )
 
 // WriteIndices adds a new INDICES accessor to doc

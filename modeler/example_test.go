@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"io/ioutil"
 
-	"github.com/qmuntal/gltf"
-	"github.com/qmuntal/gltf/modeler"
+	"github.com/amorist/gltf"
+	"github.com/amorist/gltf/modeler"
 )
 
 func Example() {

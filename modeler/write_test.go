@@ -6,8 +6,8 @@ import (
 	"io"
 	"testing"
 
+	"github.com/amorist/gltf"
 	"github.com/go-test/deep"
-	"github.com/qmuntal/gltf"
 )
 
 func TestAlignment(t *testing.T) {

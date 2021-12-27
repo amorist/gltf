@@ -3,7 +3,7 @@ package gltf_test
 import (
 	"fmt"
 
-	"github.com/qmuntal/gltf"
+	"github.com/amorist/gltf"
 )
 
 func ExampleOpen() {

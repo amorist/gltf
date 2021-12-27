@@ -3,8 +3,8 @@ package binary_test
 import (
 	"fmt"
 
-	"github.com/qmuntal/gltf"
-	"github.com/qmuntal/gltf/binary"
+	"github.com/amorist/gltf"
+	"github.com/amorist/gltf/binary"
 )
 
 func ExampleWrite() {

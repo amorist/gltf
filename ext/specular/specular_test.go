@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/qmuntal/gltf"
+	"github.com/amorist/gltf"
 )
 
 func TestPBRSpecularGlossiness_UnmarshalJSON(t *testing.T) {

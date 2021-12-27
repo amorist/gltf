@@ -7,7 +7,7 @@ import (
 	"encoding/json"
 	"math"
 
-	"github.com/qmuntal/gltf"
+	"github.com/amorist/gltf"
 )
 
 const (
